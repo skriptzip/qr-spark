@@ -1,6 +1,6 @@
 {
   "name": "qr-spark",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A pure TypeScript QR code generator with zero external dependencies",
   "keywords": [
     "qr",
@@ -32,11 +32,14 @@
     "check-format": "prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "test": "vitest run",
-    "dev": "vitest"
+    "dev": "vitest",
+    "prepublishOnly": "npm run ci",
+    "local-release": "changeset version && changeset publish"
   },
   "license": "MIT",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
+    "@changesets/cli": "^2.29.5",
     "prettier": "^3.6.0",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
