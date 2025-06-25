@@ -1,4 +1,4 @@
-# QR-Spark 🔲
+# QR-Spark 🔲 (Alpha)
 
 A pure JavaScript QR code generator with **zero external dependencies**. Built from scratch implementing the QR Code specification.
 
