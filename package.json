@@ -1,0 +1,44 @@
+{
+  "name": "qr-spark",
+  "version": "1.0.0",
+  "description": "A pure TypeScript QR code generator with zero external dependencies",
+  "keywords": [
+    "qr",
+    "qrcode",
+    "generator",
+    "cli",
+    "typescript",
+    "pure",
+    "no-dependencies"
+  ],
+  "homepage": "https://github.com/skriptzip/qr-spark",
+  "bugs": {
+    "url": "https://github.com/skriptzip/qr-spark/issues"
+  },
+  "author": "skript.zip <info@skript.zip> (https://skript.zip)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skriptzip/qr-spark.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run",
+    "dev": "vitest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "prettier": "^3.6.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
